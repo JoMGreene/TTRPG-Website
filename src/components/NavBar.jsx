@@ -4,7 +4,7 @@ import mainLogoW from "../assets/mainLogoW.png";
 
 const NavBar = () => {
   return (
-	<nav className='w-full flex py-3 justify-between items-center'>
+	<nav className='w-full sm:sticky sm:top-0 flex py-6 px-2 justify-between items-center z-[60] bg-primary/75'>
 		<div className='w-[350px] h-[80px] flex items-center'>
 			<img src={mainLogoW} alt='Shapers Of Mana' className='h-[60px] ml-6'/>
 			<h1 className=' text-white text-[32px] text-center justify-self-center font-neohellenic ml-6 text-shadow-main'>Shapers Of Mana</h1>

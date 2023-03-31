@@ -27,7 +27,7 @@
 }
 
 .selected-card {
-  left: -40px;
+  left: 0px;
   transition: all 600ms;
   z-index: 60;
 }
@@ -40,6 +40,11 @@
   animation: fadeInAnim ease-in-out 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.stick-css {
+  position: sticky;
+  top: 0px;
 }
 
 @keyframes fadeInAnim {
