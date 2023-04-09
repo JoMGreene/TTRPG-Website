@@ -1,6 +1,6 @@
 import React from 'react';
-import tempmap from '../assets/tempmap.jpg';
 import cardData from '../assets/cardData'
+import { Link } from 'react-router-dom'
 
 const SlideStick = () => {
 
@@ -34,7 +34,7 @@ const SlideStick = () => {
 			};
 	
 		} else {
-			magicText.current.classList.remove('magic-text-hide', 'absolute', 'transition', 'duration-700');
+			magicText.current.classList.remove('magic-text-hide', 'absolute');
 			magicText.current.classList.add('transition', 'duration-700');
 			cards.forEach(crd => crd == cards[cardIndex] ? crd.current.classList.remove('selected-card') : crd.current.classList.remove('magic-text-hide'));
 			cards[cardIndex].current.classList.add(cardRotate[cardIndex], "hover:-translate-y-6", "hover:z-50");
@@ -51,29 +51,29 @@ const SlideStick = () => {
 
   return (
 	<div>
-		<div className='sm:sticky sm:top-0 w-screen sm:h-screen h-[110vh] bg-bg4 bg-cover '>	
+		<div className='sm:sticky sm:top-0 w-full sm:h-screen h-[110vh] bg-bg4 bg-cover '>	
 			<div className="w-full h-full p-10 flex flex-col lg:flex-row justify-around items-center gap-x-[10%]">
-				<div className='lg:w-[45%] w-full h-full md:ml-24 flex flex-col sm:justify-center gap-[5%] justify-around items-center sm:mb-[15%]'>
-					<h1 className='w-full font-roboto xl:text-[48px] text-[36px] sm:text-left text-center text-shadow-drop font-bold text-white'>WELCOME TO NOXSTELLUS</h1>
-					<p className='font-roboto text-xl pl-3 sm:w-[60%] w-[90%] sm:self-start sm:text-left text-center'>Noxstellus is a continent filled with magical wonders, fantastical creatures, and powerful mages. Though the lands are rife with danger, those willing to face those dangers will find themselves handsomely rewarded. </p>
+				<div className='lg:w-[45%] w-full h-full md:ml-24 flex flex-col sm:justify-center gap-[5%] justify-around items-center sm:mb-[15%] lg:mt-0 mt-20 text-white'>
+					<h1 className='w-full font-roboto xl:text-[48px] text-[36px] sm:text-left text-center text-shadow-drop font-bold '>WELCOME TO NOXSTELLUS</h1>
+					<p className='font-roboto text-xl sm:w-[60%] w-[90%] sm:self-start sm:text-left text-center text-shadow-drop'>Noxstellus is a continent filled with magical wonders, fantastical creatures, and powerful mages. Though the lands are rife with danger, so too are they filled with countless opportunities. </p>
 				</div>
 				<div className='lg:w-[34%] w-[100%] h-full flex flex-col justify-center'>
 	
 				</div>
 			</div>
 		</div>
-		<div className='sm:sticky sm:top-0 w-screen sm:h-screen h-auto bg-bg1 bg-cover shadow-up text-white'>	
-			<div className="w-full h-full p-10 grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 justify-center items-center gap-x-[20%]">
+		<div className='sm:sticky sm:top-0 w-full sm:h-screen h-auto bg-bg3 bg-cover shadow-up text-white'>	
+			<div className="w-full h-full p-10 grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 justify-center items-center gap-x-[20%] lg:mb-0 mb-20">
 				<div className='md:w-[200px] w-[133px] md:h-[300px] h-[200px] relative justify-self-center'>
-					<button ref={cardWorld} onClick={() => expandCard(0)} className='absolute md:left-[50px] -left-[50px] z-30 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#539396]/90 to-[#555C5C]/90 -rotate-12 hover:-translate-y-6 hover:from-[#539396] hover:to-[#555C5C] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
+					<button ref={cardWorld} onClick={() => expandCard(0)} className='absolute md:left-[50px] -left-[50px] z-30 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#65c2c7]/90 to-[#000000]/90 -rotate-12 hover:-translate-y-6 hover:from-[#6ed4da] hover:to-[#111111] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
 						<h1 className='md:text-[24px] text-lg text-right font-neohellenic font-bold p-2 px-4'>World</h1>
 						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'>Use your mana to manipulate the world around you, creating spectacular displays of force.</p>
 					</button>
-					<button ref={cardBody} onClick={() => expandCard(1)} className='absolute md:left-[100px] z-20 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#539396]/90 to-[#555C5C]/90 hover:-translate-y-6 hover:from-[#539396] hover:to-[#555C5C] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
+					<button ref={cardBody} onClick={() => expandCard(1)} className='absolute md:left-[100px] z-20 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#65c2c7]/90 to-[#000000]/90 hover:-translate-y-6 hover:from-[#6ed4da] hover:to-[#111111] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
 						<h1 className='md:text-[24px] text-lg text-right font-neohellenic font-bold p-2 px-4'>Body</h1>
 						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'>Augment or alter your own body, gaining capabilities far beyond your normal limits.</p>
 					</button>
-					<button ref={cardSoul} onClick={() => expandCard(2)} className='absolute md:left-[150px] left-[50px] z-10 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#539396]/90 to-[#555C5C]/90 rotate-12 hover:-translate-y-6 hover:from-[#539396] hover:to-[#555C5C] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
+					<button ref={cardSoul} onClick={() => expandCard(2)} className='absolute md:left-[150px] left-[50px] z-10 hover:z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card from-[#65c2c7]/90 to-[#000000]/90 rotate-12 hover:-translate-y-6 hover:from-[#6ed4da] hover:to-[#111111] transition ease-in-out duration-300 shadow hover:shadow-around hover:shadow-cyan-200'>
 						<h1 className='md:text-[24px] text-lg text-right font-neohellenic font-bold p-2 px-4'>Soul</h1>
 						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'>Use your magic to influence the mana of those around you, aiding allies or debilitating foes.</p>
 					</button>
@@ -83,7 +83,7 @@ const SlideStick = () => {
 					<div className='font-roboto md:text-xl text-lg sm:w-[70%] w-[90%] flex flex-col sm:self-start justify-around gap-3 text-shadow-drop text-white'>
 						<p>In Shapers of Mana, every character uses some form of magic. Magic is categorized into three disciplines: Body, Soul, and World, each of which contains multiple magic trees to learn from.</p>
 						<p>Magic is unrestricted, anyone can learn any type of magic. Specialize into a single tree or expand your options by learning from several.</p>
-						<p>Click one of the cards to view the magic trees in that discipline, or click <a href="">Here</a> to learn more about the magic system.</p>
+						<p>Click one of the cards to view the magic trees in that discipline, or click <Link to='/magic' className=' text-blue-300'>Here</Link> to learn more about the magic system.</p>
 					</div>
 				</div>
 				<div ref={cardContainer} className='absolute opacity-0 w-[full] h-full grid grid-cols-2 grid-rows-2 gap-5 justify-items-center items-center'>
@@ -106,28 +106,28 @@ const SlideStick = () => {
 				</div>
 			</div>
 		</div>
-		<div className='sm:sticky sm:top-0 w-screen sm:h-screen h-[130vh] bg-primary text-white'>	
+		<div className='sm:sticky sm:top-0 w-full sm:h-screen h-auto bg-bg1 bg-cover shadow-up text-white'>	
 			<div className="w-full h-full p-10 flex flex-col lg:flex-row justify-around items-center gap-x-[10%]">
-				<div className='xl:w-[40%] w-full h-full mb-36 flex flex-col lg:justify-center lg:gap-[10%] justify-around items-center'>
-					<h1 className='xl:w-[36rem] w-[24rem] p-3 pr-10 relative xl:-left-14 font-roboto xl:text-[36px] text-[24px] text-right text-shadow-drop font-bold bg-[#3E9994]'>DICE POOLS</h1>
-					<div className='font-roboto text-lg w-[70%] flex flex-col items-center justify-around gap-3'>
-						<p>Shapers' core dice system is a d10 dice pool system. When a character wants to accomplish a task, they roll a number of d10s determined by the relevant attribute and skill for the task.</p>
-						<p>Any dice showing a 7 or higher each count as a success, and if the total number of successes on a roll exceeds the difficulty Threshold for the test, the character completes the task successfully.</p>
-						<p>Click <a>Here</a> to learn more about the core mechanics of Shapers.</p>
+				<div className='lg:w-[40%] w-full h-full flex flex-col lg:justify-center lg:gap-[10%] gap-[5%] justify-around items-center lg:mt-0 mt-20 lg:mb-0 mb-20'>
+					<h1 className='w-full font-roboto xl:text-[42px] text-[32px] sm:text-left text-center text-shadow-drop font-bold text-white lg:pb-0 pb-6'>ENGAGING CORE MECHANICS</h1>
+					<div className='font-roboto md:text-xl text-lg sm:w-[70%] w-[90%] flex flex-col sm:self-start justify-around gap-3 text-shadow-drop text-white'>
+						<p>In Shapers, characters' capabilities are determined by a combination of their Attributes and Skills, which represent general and specific expertise, respectively.</p>
+						<p>Shapers uses a d10 dice pool system. When attempting to accomplish a task, characters roll pools of dice and count up the number of "progress" they recieve from their dice. If the total progress exceeds the "goal" for the roll, the character succeeds. </p>
+						<p>Click <Link to='/basics' className=' text-blue-300'>Here</Link> to learn more about the core mechanics of Shapers.</p>
 					</div>
 				</div>
-				<div className='lg:w-[34%] w-[100%] h-full flex flex-col justify-center'></div>
+				<div className='lg:w-[34%] w-[100%] flex flex-col justify-center'></div>
 			</div>
 		</div>
-		<div className='sm:sticky sm:top-0 w-screen sm:h-screen h-[130vh] bg-primary text-white'>	
+		<div className='sm:sticky sm:top-0 w-full sm:h-screen h-auto bg-bg2 bg-cover bg-center shadow-up text-white'>	
 			<div className="w-full h-full p-10 flex flex-col lg:flex-row justify-around items-center gap-x-[10%]">
-				<div className='lg:w-[34%] w-[100%] h-full flex flex-col justify-center'></div>
-				<div className='xl:w-[40%] w-full h-full mb-36 flex flex-col lg:justify-center lg:gap-[10%] justify-around items-center'>
-					<h1 className='xl:w-[36rem] w-[24rem] p-3 pr-10 relative xl:-left-14 font-roboto xl:text-[36px] text-[24px] text-right text-shadow-drop font-bold bg-[#3E9994]'>DUAL EXP PROGRESSION</h1>
-					<div className='font-roboto text-lg w-[70%] flex flex-col items-center justify-around gap-3'> 
+				<div className='lg:w-[34%] w-full h-full flex flex-col justify-center'></div>
+				<div className='lg:w-[40%] w-full h-full flex flex-col lg:justify-center lg:gap-[10%] gap-[5%] justify-around items-center lg:mt-0 mt-20 lg:mb-0 mb-20'>
+					<h1 className='w-full font-roboto xl:text-[42px] text-[32px] sm:text-left text-center text-shadow-drop font-bold text-white lg:pb-0 pb-6'>DUAL EXP PROGRESSION</h1>
+					<div className='font-roboto md:text-xl text-lg sm:w-[70%] w-[90%] flex flex-col sm:self-start justify-around gap-3 text-shadow-drop text-white' > 
 						<p>In Shapers, there are two different forms of experience points that characters can earn, Standard XP and Magic XP. </p>
-						<p> Rather than gathering EXP to reach the next level, characters spend the experience points they've earned to directly upgrade their stats or abilities. Standard XP is used to improve characters' attribute and skill ratings, while Magic XP is spent on unlocking new spells and magical abilities.</p>
-						<p>Click <a href="">Here</a> to learn more about character progression.</p>
+						<p> Rather than gathering EXP to reach the next level, characters spend the experience points they've earned to directly upgrade their abilities. Standard XP is used to improve characters' Attribute and Skill ratings, while Magic XP is spent on unlocking new spells and magical abilities.</p>
+						<p>Click <Link to='/basics' className=' text-blue-300'>Here</Link> to learn more about character progression.</p>
 					</div>
 				</div>
 				

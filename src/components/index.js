@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
-import Slide from "./Slide";
+import Core from "./Core";
 import SlideStick from "./SlideStick";
+import Footer from "./Footer";
 
-export {NavBar, Slide, SlideStick};
+export {NavBar, Core, SlideStick, Footer};

@@ -17,10 +17,13 @@ module.exports = {
         'arrow-icon': "url('/src/assets/arrow.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-card': 'linear-gradient(195deg, var(--tw-gradient-stops))',
-        'bg1': 'url(/src/assets/e-grossgasteiger-4.jpg)',
-        'bg2': 'url(/src/assets/e-grossgasteiger-3.jpg)',
-        'bg3': 'url(/src/assets/zhou-xian-1.jpg)',
+        'bg1': 'url(/src/assets/tim-foster-1.jpg)',
+        'bg2': 'url(/src/assets/martin-sanchez-1.jpg)',
+        'bg3': 'url(/src/assets/marek-piwnicki-2.jpg)',
         'bg4': 'url(/src/assets/david-marcu-1.jpg)',
+      },
+      borderStyle: {
+        inset: 'inset',
       },
       textShadow: {
         main: '0 0 5px #3E9994, 0 0 10px #3E9994, 0 0 15px #3E9994, 0 0 20px #3E9994, 0 0 25px #3E9994',
