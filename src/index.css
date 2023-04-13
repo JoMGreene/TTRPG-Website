@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --outertoggle: #04050A;
+  --innertoggle: #f0f8ff;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -28,6 +33,38 @@ nav {
 
 .toggle-dropdown {
   display: none;
+}
+
+.toggle {
+  height: 22px;
+  width: 45px;
+  background-color: var(--innertoggle);
+  border-radius: 16px;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+}
+.toggle::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: var(--outertoggle);
+  position: absolute;
+  z-index: 2;
+  transform: translate(0);
+  transition: transform 0.5s ease;
+}
+
+.toggle.light-mode::before {
+  transform: translateX(22px);
+}
+
+.toggle input {
+  opacity: 0;
+  top: 0;
+  position: absolute;
 }
 
 .linkedin-button {

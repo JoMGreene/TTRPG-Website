@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -27,6 +28,7 @@ module.exports = {
       },
       textShadow: {
         main: '0 0 5px #3E9994, 0 0 10px #3E9994, 0 0 15px #3E9994, 0 0 20px #3E9994, 0 0 25px #3E9994',
+        lightTitle: '1px 1px 2px #555555',
         drop: '2px 2px 10px #333333',
         white: '2px 2px 10px #ffffff'
       },

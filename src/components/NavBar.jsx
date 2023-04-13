@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import mainLogoW from "../assets/mainLogoW.png";
 import { Link } from 'react-router-dom';
 
@@ -13,13 +12,14 @@ const NavBar = () => {
 		<label htmlFor="toggle-dropdown" className='toggle-dropdown-label'>
 			<span></span>
 		</label>
-		<nav className='sm:w-auto w-full sm:bg-transparent bg-primary/90'>
-			<ul className='list-none flex sm:flex-row flex-col justify-end items-center flex-1 font-neohellenic font-normal text-[24px] text-secondary'>
+		<nav className='sm:w-auto w-full sm:bg-transparent bg-primary/90 justify-self-end '>
+			<ul className='list-none flex sm:flex-row flex-col justify-end items-center flex-1 font-neohellenic font-normal text-[24px] text-secondary '>
 				<li className='sm:mr-20'><Link to='/'>Home</Link></li>
 				<li className='sm:mr-20'><Link to='/basics'>Basics</Link></li>
 				<li className='sm:mr-6'><Link to='/magic'>Magic</Link></li>
 			</ul>
 		</nav>
+		
 	</div>
   )
 }

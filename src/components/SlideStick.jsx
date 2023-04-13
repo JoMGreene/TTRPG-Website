@@ -111,9 +111,9 @@ const SlideStick = () => {
 				<div className='lg:w-[40%] w-full h-full flex flex-col lg:justify-center lg:gap-[10%] gap-[5%] justify-around items-center lg:mt-0 mt-20 lg:mb-0 mb-20'>
 					<h1 className='w-full font-roboto xl:text-[42px] text-[32px] sm:text-left text-center text-shadow-drop font-bold text-white lg:pb-0 pb-6'>ENGAGING CORE MECHANICS</h1>
 					<div className='font-roboto md:text-xl text-lg sm:w-[70%] w-[90%] flex flex-col sm:self-start justify-around gap-3 text-shadow-drop text-white'>
-						<p>In Shapers, characters' capabilities are determined by a combination of their Attributes and Skills, which represent general and specific expertise, respectively.</p>
-						<p>Shapers uses a d10 dice pool system. When attempting to accomplish a task, characters roll pools of dice and count up the number of "progress" they recieve from their dice. If the total progress exceeds the "goal" for the roll, the character succeeds. </p>
-						<p>Click <Link to='/basics' className=' text-blue-300'>Here</Link> to learn more about the core mechanics of Shapers.</p>
+						<p>Characters' capabilities are determined by a combination of their Attributes and Skills, which represent general and specific expertise, respectively.</p>
+						<p>Shapers of Mana uses a d10 dice pool system. When attempting to accomplish a task, characters roll pools of dice and count up the number of "progress" they recieve from their dice. If the total progress exceeds the "goal" for the roll, the character succeeds. </p>
+						<p>Click <Link to='/basics' className=' text-blue-300'>Here</Link> to learn more about the core mechanics.</p>
 					</div>
 				</div>
 				<div className='lg:w-[34%] w-[100%] flex flex-col justify-center'></div>
@@ -125,8 +125,8 @@ const SlideStick = () => {
 				<div className='lg:w-[40%] w-full h-full flex flex-col lg:justify-center lg:gap-[10%] gap-[5%] justify-around items-center lg:mt-0 mt-20 lg:mb-0 mb-20'>
 					<h1 className='w-full font-roboto xl:text-[42px] text-[32px] sm:text-left text-center text-shadow-drop font-bold text-white lg:pb-0 pb-6'>DUAL EXP PROGRESSION</h1>
 					<div className='font-roboto md:text-xl text-lg sm:w-[70%] w-[90%] flex flex-col sm:self-start justify-around gap-3 text-shadow-drop text-white' > 
-						<p>In Shapers, there are two different forms of experience points that characters can earn, Standard XP and Magic XP. </p>
-						<p> Rather than gathering EXP to reach the next level, characters spend the experience points they've earned to directly upgrade their abilities. Standard XP is used to improve characters' Attribute and Skill ratings, while Magic XP is spent on unlocking new spells and magical abilities.</p>
+						<p>There are two different forms of experience points that characters can earn, Standard XP and Magic XP. </p>
+						<p>Rather than gathering EXP to reach the next level, characters spend the experience points they've earned to directly upgrade their abilities. Standard XP is used to improve characters' Attribute and Skill ratings, while Magic XP is spent on unlocking new spells and magical abilities.</p>
 						<p>Click <Link to='/basics' className=' text-blue-300'>Here</Link> to learn more about character progression.</p>
 					</div>
 				</div>
