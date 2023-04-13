@@ -9,17 +9,23 @@ const Footer = () => {
 	const initTheme = localStorage.getItem('darkMode')
 	const [theme, setTheme] = useState((initTheme) ? initTheme : 'dark');
 	let root = document.documentElement;
+	if(theme === 'light') {
+		root.style.setProperty('--outertoggle', '#f0f8ff')
+		root.style.setProperty('--innertoggle', '#04050A')
+	}
 
 	const toggleTheme = () => {
 		if(theme === 'dark') {
 			setTheme('light')
 			root.style.setProperty('--outertoggle', '#f0f8ff')
 			root.style.setProperty('--innertoggle', '#04050A')
+			localStorage.setItem('darkMode', 'light')
 			
 		} else {
 			setTheme('dark')
 			root.style.setProperty('--outertoggle', '#04050A')
 			root.style.setProperty('--innertoggle', '#f0f8ff')
+			localStorage.setItem('darkMode', 'dark')
 		}
 	}
 
