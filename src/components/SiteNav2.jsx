@@ -33,7 +33,7 @@ const SiteNav2 = () => {
 
   }
   return (
-	<div className=' sticky h-[550px] top-[110px]'>
+	<div className=' absolute sm:sticky h-[550px] top-[110px]'>
 		<label htmlFor="nav-toggle" className='absolute mt-5 ml-2'>
 			<div ref={sideBarRotate} className={`sidebar-toggle ${toggleShow}`}>
 				<input type='checkbox' id='nav-toggle' onClick={toggleSidebar}/>
