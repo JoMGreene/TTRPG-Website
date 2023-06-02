@@ -35,6 +35,45 @@ nav {
   display: none;
 }
 
+.nav-from-left {
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-active {
+  width: 175px;
+  transform: translateX(0);
+}
+
+.arrow {
+  border: solid var(--outertoggle);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.sidebar-toggle{
+  height: 30px;
+  width: 30px;
+  background-color: var(--innertoggle);
+  border-radius: 15px;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  transform: rotate(0);
+  transition: transform 0.5s ease;
+}
+
+.sidebar-toggle.toggle-shown {
+  transform: rotate(180deg);
+}
+
 .toggle {
   height: 22px;
   width: 45px;
@@ -62,6 +101,11 @@ nav {
 }
 
 .toggle input {
+  opacity: 0;
+  top: 0;
+  position: absolute;
+}
+.sidebar-toggle input {
   opacity: 0;
   top: 0;
   position: absolute;
@@ -171,6 +215,14 @@ nav {
 .stick-css {
   position: sticky;
   top: 0px;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 
 @keyframes fadeInAnim {

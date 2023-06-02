@@ -22,6 +22,7 @@ module.exports = {
         'bg2': 'url(/src/assets/martin-sanchez-1.jpg)',
         'bg3': 'url(/src/assets/marek-piwnicki-2.jpg)',
         'bg4': 'url(/src/assets/david-marcu-1.jpg)',
+        'bg5': 'url(/src/assets/e-grossgasteiger-4.jpg)',
       },
       borderStyle: {
         inset: 'inset',

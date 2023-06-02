@@ -89,19 +89,19 @@ const SlideStick = () => {
 				<div ref={cardContainer} className='absolute opacity-0 w-[full] h-full grid grid-cols-2 grid-rows-2 gap-5 justify-items-center items-center'>
 					<button className={` z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card hover:shadow-around hover:shadow-cyan-200 self-center`}>
 						<h1 className='md:text-[24px] text-lg text-left font-neohellenic font-bold p-2 px-4'></h1>
-						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'></p>
+						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-tight'></p>
 					</button>
 					<button className={`z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card hover:shadow-around hover:shadow-cyan-200`}>
 						<h1 className='md:text-[24px] text-lg text-left font-neohellenic font-bold p-2 px-4'></h1>
-						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'></p>
+						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-tight'></p>
 					</button>
 					<button className={`z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card hover:shadow-around hover:shadow-cyan-200`}>
 						<h1 className='md:text-[24px] text-lg text-left font-neohellenic font-bold p-2 px-4'></h1>
-						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'></p>
+						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-tight'></p>
 					</button>
 					<button className={`z-50 md:w-[200px] w-[133px] md:h-[300px] h-[200px] rounded-2xl grid md:grid-rows-card-grid grid-rows-card-grid-small  md:gap-5 gap-2 border-solid border-2 border-[#A4F4F0] bg-gradient-card hover:shadow-around hover:shadow-cyan-200`}>
 						<h1 className='md:text-[24px] text-lg text-left font-neohellenic font-bold p-2 px-4'></h1>
-						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-normal'></p>
+						<p className='md:text-[20px] text-sm text-left font-neohellenic px-4 leading-tight'></p>
 					</button>
 				</div>
 			</div>
