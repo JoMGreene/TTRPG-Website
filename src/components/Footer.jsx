@@ -37,9 +37,9 @@ const Footer = () => {
 		<div className='w-[90%] mt-4 h-0 border-solid border-2 border-slate-400 dark:border-slate-800  rounded-sm '></div>
 		<h1 className=' text-slate-500 text-2xl pt-10 self-start pl-[5%]'>Contact Me: </h1>
 		<div className='w-[40%] self-start flex flex-row justify-start pt-3 pl-[5%] h-24 bg-slate-200 dark:bg-primary gap-1'>
-			<a className='outlink-button' href="https://www.linkedin.com/in/joseph-greene-253712215/"><img src={LinkedinLogo}></img></a>
-			<a className='outlink-button' href="https://twitter.com/JosephG29455714"><img src={TwitterLogo}></img></a>
-			<a className='outlink-button' href="https://github.com/JoMGreene?tab=repositories"><img src={GithubLogo}></img></a>
+			<a className='outlink-button' href="https://www.linkedin.com/in/joseph-greene-253712215/" aria-label='Link to my LinkedIn profile'><img src={LinkedinLogo} alt='LinkedinLogo'></img></a>
+			<a className='outlink-button' href="https://twitter.com/JosephG29455714" aria-label='Link to my Twitter profile'><img src={TwitterLogo} alt='TwitterLogo'></img></a>
+			<a className='outlink-button' href="https://github.com/JoMGreene?tab=repositories" aria-label='Link to my Github profile'><img src={GithubLogo} alt='GithubLogo'></img></a>
 		</div>
 		<label htmlFor="theme-toggle" className='justify-self-end text-white absolute top-[2.25rem] right-6'>
 			<div className={`toggle ${theme === 'dark' ? 'dark-mode': 'light-mode'}`}>

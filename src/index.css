@@ -46,7 +46,7 @@ nav {
 }
 
 .arrow {
-  border: solid var(--outertoggle);
+  border: solid var(--innertoggle);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -61,7 +61,6 @@ nav {
 .sidebar-toggle{
   height: 30px;
   width: 30px;
-  background-color: var(--innertoggle);
   border-radius: 15px;
   padding: 3px;
   cursor: pointer;
@@ -217,12 +216,57 @@ nav {
   top: 0px;
 }
 
+.video-pos {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .header-text {
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 5px;
   margin-left: -10px;
   padding-left: 10px;
+}
+
+.hide-text-left {
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: all 1s ease-out;
+  filter:blur(3px);
+}
+
+.hide-text-right {
+  transform: translateX(20%);
+  opacity: 0;
+  transition: all 1s ease-out;
+  filter:blur(3px);
+}
+
+.reveal-text {
+  transform: translateX(0);
+  opacity: 1;
+  filter:blur(0);
+}
+
+.fog1, .fog2, .fog3 {
+  left: 150%;
+}
+
+.fog1 {
+  animation: fog1_opacity 10s linear infinite, fog1_move 19s linear infinite;
+}
+
+.fog2 {
+  animation: fog2_opacity 10s linear infinite, fog1_move 21s linear 4s infinite;
+}
+
+.fog3 {
+  animation: fog3_opacity 10s linear infinite, fog1_move 25s linear 8s infinite;
 }
 
 @keyframes fadeInAnim {
@@ -234,6 +278,35 @@ nav {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+
+@keyframes fog1_opacity {
+  0% {opacity: .3;}
+  25% {opacity: .6;}
+  50% {opacity: .8;}
+  75% {opacity: .6;}
+  100% {opacity: .3;}
+}
+
+@keyframes fog2_opacity {
+  0% {opacity: .7;}
+  25% {opacity: .5;}
+  50% {opacity: .6;}
+  75% {opacity: .5;}
+  100% {opacity: .7;}
+}
+
+@keyframes fog3_opacity {
+  0% {opacity: .6;}
+  25% {opacity: .5;}
+  50% {opacity: .8;}
+  75% {opacity: .5;}
+  100% {opacity: .6;}
+}
+
+@keyframes fog1_move {
+  0% {left: 100%;}
+  100% {left: -100%;}
 }
 
 @media screen and (min-width: 768px){
@@ -253,4 +326,16 @@ nav {
     justify-content: flex-end;
     align-items: center;
 }
+}
+
+@media(prefers-reduced-motion) {
+  .hide-text-left {
+    transition: none;
+  }
+  .hide-text-right {
+    transition: none;
+  }
+  .fog1, .fog2, .fog3 {
+    display: hidden;
+  }
 }

@@ -26,8 +26,8 @@ const cardData = [
 		"classes" : ["from-[#851616]/90", "to-[#4E0F25]/75", "hover:from-[#851616]", "hover:to-[#4E0F25]", "move"],
 	},
 	{
-		"header": "Presence",
-		"body": "Let all be aware of your arrival, or none. Blend in with the crowd or become the center of attention",
+		"header": "Craftsmanship",
+		"body": "Create inspiring works of art or devastatingly powerful magical artifacts.",
 		"classes" : ["from-[#C03276]/90", "to-[#7C2D53]/75", "hover:from-[#C03276]", "hover:to-[#7C2D53]", "move"],
 	},
 	{
@@ -51,7 +51,7 @@ const cardData = [
 		"classes" : ["from-[#1B8881]/90", "to-[#000000]/75", "hover:from-[#1B8881]", "hover:to-[#000000]", "move"],
 	},
 	{
-		"header": "Suppression",
+		"header": "Disruption",
 		"body": "Debilitate your enemies, making their thoughts clouded and movements sluggish.",
 		"classes" : ["from-[#8D892D]/90", "to-[#5A4758]/75", "hover:from-[#8D892D]", "hover:to-[#5A4758]", "move"],
 	},

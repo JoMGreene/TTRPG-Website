@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavBar, SlideStick} from '../components';
+import { SlideStick} from '../components';
 
 const Home = () => (
 

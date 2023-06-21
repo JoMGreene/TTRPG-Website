@@ -9,11 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pixi/react": "^7.1.0",
+    "@pixi/ticker": "^7.2.4",
+    "@types/three": "^0.152.1",
     "firebase": "^9.18.0",
+    "pixi": "^0.3.1",
+    "pixi.js": "^7.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.4",
     "react-router-dom": "^6.10.0",
     "react-transition-group": "^4.4.5",
+    "react-water-wave": "^2.0.1",
+    "three": "^0.153.0",
+    "vanta": "^0.5.24",
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
