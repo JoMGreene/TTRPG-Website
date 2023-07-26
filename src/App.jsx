@@ -1,8 +1,9 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar, Footer} from './components';
-import {Home, Basics, Magic, Species, SpecSpecies, Combat, SpecCombat, MagicDisc} from './pages';
+import {Home, SpecSpecies,  SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics} from './pages';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 import ContentTemplate from './components/ContentTemplate';
 import Introduction from './pages/Introduction';
 
@@ -17,7 +18,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
 
 const App = () => (
@@ -26,9 +27,12 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="intro" element={<Introduction />} />
-      <Route path="basics" element={<Basics />} />
+      <Route path="basics" >
+        <Route index element={<ContentTemplate link="BasicsMainPage" mainColor='gray'/>} />
+        <Route path=":id" element={<SpecBasics />} />
+      </Route>
       <Route path="magic">
-        <Route index element={<Magic />} /> 
+        <Route index element={<ContentTemplate link="MagicMainPage" mainColor='teal'/>} /> 
         <Route path="world" >
           <Route index element={<ContentTemplate link="Magicworld" mainColor='teal' />} />
           <Route path=":id" element={<MagicDisc />} />
@@ -43,13 +47,20 @@ const App = () => (
         </Route>
       </Route>
       <Route path="species">
-        <Route index element={ <Species />} />
+        <Route index element={<ContentTemplate link="SpeciesMainPage" mainColor='burgandy'/>} />
         <Route path=":id" element={<SpecSpecies />} />  
       </Route> 
       <Route path='combat'>
-        <Route index element={<Combat />} />
+        <Route index element={<ContentTemplate link="CombatMainPage" mainColor='red'/>} />
         <Route path=":id" element={<SpecCombat />} />
       </Route>
+      <Route path='equipment'>
+        <Route index element={<ContentTemplate link="EquipmentMainPage" mainColor='purple'/>} />
+        <Route path=":id" element={<SpecEquipment />} />
+      </Route>
+      <Route path='creation' element={<ContentTemplate link="CharacterCreationMain" mainColor='blue'/>} />
+      <Route path='notfound' element={<NotFound />} />
+      <Route path='*' element={<Navigate to="/notfound" replace />}/>
     </Routes>
     <Footer />
   </div>

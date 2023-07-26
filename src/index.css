@@ -35,6 +35,10 @@ nav {
   display: none;
 }
 
+.dis-inline {
+  display: inline;
+}
+
 .nav-from-left {
   transform: scaleX(0);
   transition: transform 0.5s ease;
@@ -225,12 +229,41 @@ nav {
   height: 100%;
 }
 
+.standard-table {
+  margin-top: 2rem;
+  table-layout: auto;
+  width: fit-content;
+  align-self: center;
+}
+
+.standard-table, td {
+  border-collapse: collapse;
+  border: 1px solid var(--innertoggle);
+}
+
+td {
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}
+
 .header-text {
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 5px;
   margin-left: -10px;
   padding-left: 10px;
+}
+
+.small-header-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-left: -5px;
+  padding-left: 7px;
+}
+
+.par-text {
+  margin-inline: 5px;
 }
 
 .hide-text-left {

@@ -2,11 +2,11 @@ import React from 'react'
 import ContentTemplate from '../components/ContentTemplate'
 import { useParams } from 'react-router-dom'
 
-const MagicDisc = (props) =>{
+const SpecBasics = () => {
 	const { id } = useParams()
-	return(
-	<ContentTemplate link={"Magic" + id} mainColor='teal' dataB={props.data}/>
+  	return (
+		<ContentTemplate link={"Basics" + id} mainColor='gray'/>
+  )
+}
 
-)}
-
-export default MagicDisc
+export default SpecBasics

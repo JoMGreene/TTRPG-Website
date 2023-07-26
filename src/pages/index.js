@@ -1,11 +1,9 @@
-import Basics from "./Basics"
 import Home from "./Home"
-import Magic from "./Magic"
-import MagicTree from "./MagicTree"
-import Species from "./Species"
 import SpecSpecies from "./SpecSpecies"
-import Combat from "./Combat"
 import SpecCombat from "./SpecCombat"
 import MagicDisc from "./MagicDisc"
+import SpecEquipment from "./SpecEquipment"
+import NotFound from "./NotFound"
+import SpecBasics from "./SpecBasics"
 
-export {Basics, Home, Magic, MagicTree, Species, SpecSpecies, Combat, SpecCombat, MagicDisc}
+export {Home, SpecSpecies, SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics}

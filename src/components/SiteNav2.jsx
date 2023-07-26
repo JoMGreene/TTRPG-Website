@@ -42,12 +42,13 @@ const SiteNav2 = () => {
 
 		</label>
 		<div ref={sideBar} className={`w-[0px] h-fit shrink-0 mt-[38px] transition-all ease-in-out duration-500 -translate-x-40 bg-slate-400 py-6 flex flex-col items-center justify-start gap-3 font-roboto text-primary  border rounded-r-md ${navStatus}`}>
-			<Link to='/'>Home</Link>
-			<Link to='/Basics'>Core Rules</Link>
+			<Link to='/intro'>Introduction</Link>
+			<Link to='/Basics'>Rules</Link>
 			<Link to='/Magic'>Magic</Link>
 			<Link to='/Species'>Species</Link>
 			<Link to='/Combat'>Combat</Link>
 			<Link to='/Equipment'>Equipment</Link>
+			<Link to='/Creation'>Creation</Link>
 		</div>
 	</div>
   )
