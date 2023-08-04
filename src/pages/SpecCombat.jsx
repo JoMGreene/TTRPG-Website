@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 const SpecCombat = () => {
 	const { id } = useParams()
   	return (
-		<ContentTemplate link={"Combat" + id} mainColor='red'/>
+		<ContentTemplate link={"Combat" + id} mainColor='teal'/>
   )
 }
 

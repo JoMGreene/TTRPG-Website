@@ -2,11 +2,11 @@ import React from 'react'
 import ContentTemplate from '../components/ContentTemplate'
 import { useParams } from 'react-router-dom'
 
-const SpecCombat = () => {
+const SpecSocial = () => {
 	const { id } = useParams()
   	return (
-		<ContentTemplate link={"Equipment" + id} mainColor='teal'/>
+		<ContentTemplate link={"Social" + id} mainColor='teal'/>
   )
 }
 
-export default SpecCombat
+export default SpecSocial

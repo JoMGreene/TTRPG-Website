@@ -5,5 +5,6 @@ import MagicDisc from "./MagicDisc"
 import SpecEquipment from "./SpecEquipment"
 import NotFound from "./NotFound"
 import SpecBasics from "./SpecBasics"
+import SpecSocial from "./SpecSocial"
 
-export {Home, SpecSpecies, SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics}
+export {Home, SpecSpecies, SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics, SpecSocial}

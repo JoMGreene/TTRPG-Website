@@ -7,7 +7,7 @@ const SpecSpecies = () => {
 
   const { id } = useParams()
   return (
-	<ContentTemplate link={"Species" + id} mainColor='burgandy'/>
+	<ContentTemplate link={"Species" + id} mainColor='teal'/>
   )
 }
 

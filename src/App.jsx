@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar, Footer} from './components';
-import {Home, SpecSpecies,  SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics} from './pages';
+import {Home, SpecSpecies,  SpecCombat, MagicDisc, SpecEquipment, NotFound, SpecBasics, SpecSocial} from './pages';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
@@ -47,18 +47,22 @@ const App = () => (
         </Route>
       </Route>
       <Route path="species">
-        <Route index element={<ContentTemplate link="SpeciesMainPage" mainColor='burgandy'/>} />
+        <Route index element={<ContentTemplate link="SpeciesMainPage" mainColor='teal'/>} />
         <Route path=":id" element={<SpecSpecies />} />  
       </Route> 
       <Route path='combat'>
-        <Route index element={<ContentTemplate link="CombatMainPage" mainColor='red'/>} />
+        <Route index element={<ContentTemplate link="CombatMainPage" mainColor='teal'/>} />
         <Route path=":id" element={<SpecCombat />} />
       </Route>
+      <Route path='social'>
+        <Route index element={<ContentTemplate link="SocialMainPage" mainColor='teal'/>} />
+        <Route path=":id" element={<SpecSocial />} />
+      </Route>
       <Route path='equipment'>
-        <Route index element={<ContentTemplate link="EquipmentMainPage" mainColor='purple'/>} />
+        <Route index element={<ContentTemplate link="EquipmentMainPage" mainColor='teal'/>} />
         <Route path=":id" element={<SpecEquipment />} />
       </Route>
-      <Route path='creation' element={<ContentTemplate link="CharacterCreationMain" mainColor='blue'/>} />
+      <Route path='creation' element={<ContentTemplate link="CharacterCreationMain" mainColor='teal'/>} />
       <Route path='notfound' element={<NotFound />} />
       <Route path='*' element={<Navigate to="/notfound" replace />}/>
     </Routes>

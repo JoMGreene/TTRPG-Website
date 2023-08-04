@@ -47,6 +47,7 @@ const SiteNav2 = () => {
 			<Link to='/Magic'>Magic</Link>
 			<Link to='/Species'>Species</Link>
 			<Link to='/Combat'>Combat</Link>
+			<Link to='/Social'>Social</Link>
 			<Link to='/Equipment'>Equipment</Link>
 			<Link to='/Creation'>Creation</Link>
 		</div>
